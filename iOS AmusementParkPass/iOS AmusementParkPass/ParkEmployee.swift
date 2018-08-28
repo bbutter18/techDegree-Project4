@@ -58,26 +58,32 @@ class FoodService: Employable {
         
         
         guard let firstName = firstName else {
+            print("Missing First Name")
             throw RequiredInformation.FirstNameMissing
         }
         
         guard let lastName = lastName else {
+            print("Missing Last Name")
             throw RequiredInformation.LastNameMissing
         }
         
         guard let address = address else {
+            print("Missing Address Information")
             throw RequiredInformation.AddressMissing
         }
         
         guard let city = city else {
+            print("Missing City Information")
             throw RequiredInformation.CityMissing
         }
         
         guard let state = state else {
+            print("Missing State Information")
             throw RequiredInformation.StateMissing
         }
         
         guard let zipcode = zipcode else {
+            print("Missing Zipcode Information")
             throw RequiredInformation.ZipcodeMissing
         }
         

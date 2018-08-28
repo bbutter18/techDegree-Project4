@@ -115,6 +115,7 @@ class ChildGuest: AnyDayGuest {
         
         guard let Birthday = Birthday else {
             
+            print("Missing Date of Birth Information")
             throw RequiredInformation.DateOfBirthMissing
         }
         

@@ -15,6 +15,7 @@
 		5F06B30C212B4B6E00CD6040 /* ParkEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F06B30B212B4B6E00CD6040 /* ParkEmployee.swift */; };
 		5F06B310212E412300CD6040 /* AnyDayGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F06B30F212E412300CD6040 /* AnyDayGuest.swift */; };
 		5F06B312212FA62900CD6040 /* SwipePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F06B311212FA62900CD6040 /* SwipePass.swift */; };
+		5FA0ABCC2135B12900A2A6A6 /* TestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0ABCB2135B12900A2A6A6 /* TestCases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5F06B30B212B4B6E00CD6040 /* ParkEmployee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkEmployee.swift; sourceTree = "<group>"; };
 		5F06B30F212E412300CD6040 /* AnyDayGuest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDayGuest.swift; sourceTree = "<group>"; };
 		5F06B311212FA62900CD6040 /* SwipePass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePass.swift; sourceTree = "<group>"; };
+		5FA0ABCB2135B12900A2A6A6 /* TestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5F06B2F9212B4A6600CD6040 /* ViewController.swift */,
 				5F06B30F212E412300CD6040 /* AnyDayGuest.swift */,
 				5F06B311212FA62900CD6040 /* SwipePass.swift */,
+				5FA0ABCB2135B12900A2A6A6 /* TestCases.swift */,
 				5F06B30B212B4B6E00CD6040 /* ParkEmployee.swift */,
 				5F06B2FB212B4A6600CD6040 /* Main.storyboard */,
 				5F06B2FE212B4A6600CD6040 /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				5F06B2F8212B4A6600CD6040 /* AppDelegate.swift in Sources */,
 				5F06B30C212B4B6E00CD6040 /* ParkEmployee.swift in Sources */,
 				5F06B312212FA62900CD6040 /* SwipePass.swift in Sources */,
+				5FA0ABCC2135B12900A2A6A6 /* TestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +313,7 @@
 				5F06B308212B4A6600CD6040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

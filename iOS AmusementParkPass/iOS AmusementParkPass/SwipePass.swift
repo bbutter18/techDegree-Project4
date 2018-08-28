@@ -9,27 +9,22 @@
 import Foundation
 
 
-class EmployeeBadge {
-    var Employee: Employable
-    
-    
-    init(Employee: Employable){
-        self.Employee = Employee
-        
-    }
+
+
+
 
     
-    func employeeAccess(employee: Employable, accessTo: AreaAccess) {
+    func swipeEmployeeAccess(employee: Employable, accessTo: AreaAccess) {
     
-        if Employee.hasEmployeeBadge == true {
+        if employee.hasEmployeeBadge == true {
     
-    if Employee.employeeType == .FoodService && [accessTo] == Employee.accessArea || Employee.employeeType == .FoodService && [accessTo] == Employee.accessArea {
+    if employee.employeeType == .FoodService && accessTo.self == .AmusementPark || employee.employeeType == .FoodService && accessTo.self == .Kitchen {
         print("Access Granted")
-    } else if Employee.employeeType == .Maintenance && [accessTo] == Employee.accessArea || Employee.employeeType == .Maintenance && [accessTo] == Employee.accessArea || Employee.employeeType == .Maintenance && [accessTo] == Employee.accessArea  || Employee.employeeType == .Maintenance && [accessTo] == Employee.accessArea {
+    } else if employee.employeeType == .Maintenance && accessTo.self == .AmusementPark || employee.employeeType == .Maintenance && accessTo.self == .MaintenanceArea || employee.employeeType == .Maintenance && accessTo.self == .RideControl || employee.employeeType == .Maintenance && accessTo.self == .Kitchen {
         print("Acess Granted")
-    } else if Employee.employeeType == .RideService && [accessTo] == Employee.accessArea || Employee.employeeType == .RideService && [accessTo] == Employee.accessArea {
+    } else if employee.employeeType == .RideService && accessTo.self == .RideControl || employee.employeeType == .RideService && accessTo.self == .AmusementPark {
         print("Access Granted")
-    } else if Employee.employeeType == .ShiftManager && [accessTo] == Employee.accessArea || Employee.employeeType == .ShiftManager && [accessTo] == Employee.accessArea || Employee.employeeType == .ShiftManager && [accessTo] == Employee.accessArea || Employee.employeeType == .ShiftManager && [accessTo] == Employee.accessArea || Employee.employeeType == .ShiftManager && [accessTo] == Employee.accessArea {
+    } else if employee.employeeType == .ShiftManager && accessTo.self == .AmusementPark || employee.employeeType == .ShiftManager && accessTo.self == .Office || employee.employeeType == .ShiftManager && accessTo.self == .MaintenanceArea || employee.employeeType == .ShiftManager && accessTo.self == .Kitchen || employee.employeeType == .ShiftManager && accessTo.self == .RideControl {
         print("Acess Granted")
         
     } else {
@@ -42,7 +37,7 @@ class EmployeeBadge {
     }
     
     
-    func employeeDiscount(forEmployee: Employable) {
+    func swipeEmployeeDiscount(for Employee: Employable) {
         
         let discounts = Employee.availableDiscounts
         
@@ -52,34 +47,27 @@ class EmployeeBadge {
     }
     
     
-    func employeeRideAccess(employee: Employable) {
-        if Employee.hasEmployeeBadge == true {
+    func swipeEmployeeRideAccess(employee: Employable) {
+        if employee.hasEmployeeBadge == true {
             print("Access Granted. Enjoy the Ride.")
         } else {
             print("Pass not activated yet")
         }
     }
     
-}
 
 
-class guestParkPass {
 
-    var Guest: AnyDayGuest
+
+    func swipeGuestAccess(guest: AnyDayGuest, accessTo: AreaAccess) {
     
-    init(Guest: AnyDayGuest) {
-        self.Guest = Guest
-    }
-
-    func guestAccess(guest: AnyDayGuest, accessTo: AreaAccess) {
-    
-        if Guest.hasParkPass == true {
+        if guest.hasParkPass == true {
         
-            if Guest.parkAccessType == .ClassicGuest && [accessTo] == Guest.accessArea {
+            if guest.parkAccessType == .ClassicGuest && [accessTo] == guest.accessArea {
                 print("Access Granted")
-            } else if Guest.parkAccessType == .VIPGuest && [accessTo] == Guest.accessArea {
+            } else if guest.parkAccessType == .VIPGuest && [accessTo] == guest.accessArea {
                 print("Access Granted")
-            } else if Guest.parkAccessType == .ChildGuest && [accessTo] == Guest.accessArea {
+            } else if guest.parkAccessType == .ChildGuest && [accessTo] == guest.accessArea {
                 print("Access Granted")
             } else {
                 print("Access Denied. Invalid Credentials")
@@ -87,7 +75,7 @@ class guestParkPass {
         }
     }
     
-    func guestDiscount(forGuest: AnyDayGuest) {
+    func swipeGuestDiscount(for Guest: AnyDayGuest) {
         
         let discounts = Guest.availableDiscounts
         
@@ -97,7 +85,7 @@ class guestParkPass {
     }
 
     
-    func guestRideAccess(forGuest: AnyDayGuest) {
+    func swipeGuestRideAccess(for Guest: AnyDayGuest) {
     
         if Guest.hasParkPass == true {
             print("Access Granted. Enjoy the Ride.")
@@ -106,7 +94,7 @@ class guestParkPass {
         }
     }
     
-    func guestSkipRideLines(forGuest: AnyDayGuest) {
+    func swipeGuestSkipRideLines(for Guest: AnyDayGuest) {
         
         if Guest.hasParkPass == true {
             if Guest.parkAccessType == .VIPGuest {
@@ -117,7 +105,7 @@ class guestParkPass {
         }
     }
     
-    func checkForChildAdmission(forGuest: AnyDayGuest) {
+    func swipeCheckForChildAdmission(for Guest: AnyDayGuest) {
         
         if Guest.isChild == true {
             print("Access Granted. You are allowed Free Admission")
@@ -128,7 +116,7 @@ class guestParkPass {
         
     
     
-    
-    
-}
+
+
+
 
