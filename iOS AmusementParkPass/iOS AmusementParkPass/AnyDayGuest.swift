@@ -101,7 +101,8 @@ class ChildGuest: AnyDayGuest {
     let parkAccessType: ParkPersonType = .ChildGuest
     
     var hasParkPass: Bool? = true
-    var isChild: Bool?
+    
+    var isChild: Bool? = true
     
     var accessRides: [RideAccess] = [.AllRides]
     
